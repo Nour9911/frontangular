@@ -11,7 +11,7 @@ Postgres (BD: assignmentBD)
 STS (Spring Tools Suite)
 NodeJS
 Webstorm (or others)
-type "node install" dans le console de webstorm de frontend pour installer les dépendeances
+
 ```
 #### Notes:
 
