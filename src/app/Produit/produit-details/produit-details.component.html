@@ -1,0 +1,42 @@
+<main class="container">
+          <div class="col-lg-9 border p-30000 main-section bg-white" >
+            <div class="row hedding m-10 pl-3 pt-0 pb-3">
+             <h1>Product Details</h1>
+            </div>
+            <div class="row m-0">
+              <div class="col-lg-4 left-side-product-box pb-3" class="left-column">
+                <iframe width="570" height="315" [src]="produit.image | safe" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+        <div class="right-side-pro-detail border p-3 m-0">
+          <div class="row">
+            <div class="col-lg-12">
+              <span>{{produit.categorieProduit}}</span>
+              <p class="m-0 p-0">{{produit.libelleProduit}}</p>
+            </div>
+            <div class="col-lg-12">
+              <p class="m-0 p-0 price-pro">{{produit.prix}} $</p>
+              <hr class="p-0 m-0">
+            </div>
+            <div class="col-lg-12 pt-2">
+              <h5>Product Detail</h5>
+              <span>{{produit.description}}.</span>
+              <hr class="m-0 pt-2 mt-2">
+            </div>
+            <div class="col-lg-12">
+              <p class="tag-section"><strong>Tag : </strong><a href="">Woman</a><a href="">,Man</a></p>
+            </div>
+            <div class="col-lg-12 mt-3">
+              <div class="row">
+                <div class="col-lg-6 pb-2">
+                  <button href="#" class="btn btn-success w-100" (click)="openShowDialog3(produit)"><mat-icon>add_shopping_cart</mat-icon>Add To Cart</button>
+                </div>
+                <div class="col-lg-6">
+                  <a href="#" class="btn btn-danger w-100"  (click)="cancel()">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>

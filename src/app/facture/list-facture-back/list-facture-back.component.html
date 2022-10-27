@@ -1,0 +1,22 @@
+<div class="tab">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Type</th>
+      <th scope="col">State Delivery</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor = "let f of factures">
+      <td>{{f.date | date :'short'}}</td>
+      <td>{{f.type}}</td>
+      <td> {{f.etat_livraison}}</td>
+      <td>
+        <a href="http://localhost:8080/SpringMVC/facture/printPDF/{{f.idFacture}}" class="btn btn-primary btn-lg btn-block" >Print</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

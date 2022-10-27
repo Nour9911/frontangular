@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Modify Stock</h1>
+<div mat-dialog-content>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Modify name" [(ngModel)]="stock.libelleStock">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" floatLabel="always">
+    <mat-label>Quantity</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="stock.quantite">
+    <span matSuffix>00</span>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Supplier's name</mat-label>
+    <input matInput placeholder="Modify supplier" [(ngModel)]="stock.supplier_name">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Supplier's mail</mat-label>
+    <textarea matInput  placeholder="Modify mail" [(ngModel)]="stock.supplier_mail"></textarea>
+  </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close >No Thanks</button>
+  <button mat-flat-button (click)="update()">Ok</button>
+
+</div>

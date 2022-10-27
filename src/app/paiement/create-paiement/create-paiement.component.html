@@ -1,0 +1,50 @@
+<div class="container p-0">
+  <div class="card px-4">
+    <p class="h8 py-3">Detail payment</p>
+    <div class="row gx-3">
+
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Nature of payment</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Nature of payment</mat-label>
+        <mat-select [(value)]="paiement.nature">
+          <mat-option value="porte à porte">Door to door</mat-option>
+          <mat-option value="en ligne">Online</mat-option>
+        </mat-select>
+      </mat-form-field>
+        </div>
+      </div>
+
+      <div *ngIf="paiement.nature=='en ligne'" >
+
+      <div class="col-12">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Your credit card</p>
+          <input class="form-control mb-3" type="number" placeholder="1234 5678 435678" [(ngModel)]="paiement.card">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">Expiration date</p>
+          <input class="form-control mb-3" type="text" placeholder="MM/YYYY" [(ngModel)]="paiement.exp">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-flex flex-column">
+          <p class="text mb-1">CVV/CVC</p>
+          <input class="form-control mb-3 pt-2 " type="password" placeholder="***" [(ngModel)]="paiement.cvc" >
+        </div>
+      </div>
+
+      </div>
+
+      <div class="col-12">
+        <div class="btn btn-primary mb-3" (click)="add()" >
+          <span class="ps-3">Pay {{price}} $</span>
+          <span class="fa fa-arrow-right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

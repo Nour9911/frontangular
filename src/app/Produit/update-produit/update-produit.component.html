@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Modify Product</h1>
+<div mat-dialog-content>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Update Name" [(ngModel)]="produit.libelleProduit">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input matInput placeholder="Update price" [(ngModel)]="produit.prix">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea matInput  placeholder="Update Description" [(ngModel)]="produit.description"></textarea>
+  </mat-form-field>
+
+
+
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close >No Thanks</button>
+  <button mat-flat-button (click)="update()">Ok</button>
+
+</div>

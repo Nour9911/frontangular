@@ -1,0 +1,61 @@
+<h1 mat-dialog-title>Add Product</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input required matInput placeholder="Add name" [(ngModel)]="produit.libelleProduit">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea required matInput  placeholder="Add description" [(ngModel)]="produit.description"></textarea>
+  </mat-form-field>
+
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Categories</mat-label>
+    <mat-select [(value)]="produit.categorieProduit">
+      <mat-option>None</mat-option>
+      <mat-option value="Cuisine">Kitchen</mat-option>
+      <mat-option value="Electronique">Electronic</mat-option>
+      <mat-option value="Mode">Clothes</mat-option>
+      <mat-option value="Mode">Artisanal</mat-option>
+      <mat-option value="Mode">Mode</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+
+  <mat-form-field appearance="fill" floatLabel="always">
+    <mat-label>Price</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="produit.prix">
+    <span matPrefix>$&nbsp;</span>
+    <span matSuffix>.00</span>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Video</mat-label>
+    <textarea required matInput  placeholder="Add youtube link" [(ngModel)]="produit.image"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Stock</mat-label>
+    <mat-select [(ngModel)]="idStock">
+      <div *ngFor="let stock of stocks">
+      <mat-option value="{{stock.idStock}}" >{{stock.libelleStock}}</mat-option>
+      </div>
+    </mat-select>
+  </mat-form-field>
+
+    <div class="col-4">
+
+
+    </div>
+  </div>
+
+
+<div mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close >No Thanks</button>
+  <button mat-flat-button (click)="add()">Add</button>
+</div>

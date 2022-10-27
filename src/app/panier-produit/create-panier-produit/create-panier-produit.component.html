@@ -1,0 +1,26 @@
+<div class="container p-0">
+  <div class="card px-4">
+    <p class="h8 py-3">Tap your quantity</p>
+    <div class="row gx-3">
+
+
+
+
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Quantity</p>
+            <input class="form-control mb-3" type="number" placeholder="00" [(ngModel)]="panierproduit.quantity">
+          </div>
+        </div>
+
+
+
+      <div class="col-12">
+        <div class="btn btn-primary mb-3" (click)="add()" >
+          <span class="ps-3">Add to cart</span>
+          <span class="fa fa-arrow-right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

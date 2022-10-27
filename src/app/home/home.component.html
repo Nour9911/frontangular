@@ -1,0 +1,62 @@
+
+<!--/ Services Star /-->
+<header class="hero-section">
+  <div class="content">
+    <img class="logo" alt="">
+    <p class="sub-heading">Best Clothes Collection of all time</p>
+  </div>
+</header>
+
+<!--/ Services End /-->
+
+
+
+
+<!--/ Property Star /-->
+<section class="section-property section-t8">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-wrap d-flex justify-content-between">
+          <div class="title-box">
+            <h2 class="product-category">Products</h2>
+          </div>
+          <div class="title-link">
+            <a routerLink="/produitAll">All Products
+              <span class="ion-ios-arrow-forward"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="property-grid grid">
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div *ngFor="let produit of produits | paginate: { itemsPerPage: 2, currentPage: page } | filter: searchText">
+        <div class="card"style="width: 33.875rem;">
+          <iframe width="540" height="315" [src]="produit.image | safe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title" >Which Category: {{produit.categorieProduit}}  Product Name:  {{produit.libelleProduit}}</h5>
+            <p class="card-text">About our product : {{produit.description}}</p>
+            <h5 class="card-title" >Price : {{produit.prix}} $</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+  </div>
+</section>
+<!--/ Property End /-->
+
+
+
+
+<!--/ Agents Star /-->
+<!--/ Agents End /-->
+
+
+<!--/ footer Star /-->

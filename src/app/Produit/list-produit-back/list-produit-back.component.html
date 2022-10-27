@@ -1,0 +1,62 @@
+<div class="container mt-5 mb-5">
+  <div class="search-livreur" class="input-group">
+
+    <div class="form-outline">
+      <input class="form-control" type="text" [(ngModel)]="searchText"
+             autocomplete="off"  placeholder="Search here..">
+    </div>
+    <button type="button" class="btn btn-primary">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+
+
+
+  <div class="container-fluid">
+    <div class="col-14 d-flex justify-content-lg-end">
+      <button style="float:left; margin:5px; width:180px;" class="btn btn-success" (click)="openAddDialog()" >Add product<mat-icon style="float:left; ">add_circle_outline</mat-icon></button>
+    </div>
+  </div>
+
+
+<div class="tab">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th scope="col">Link</th>
+      <th scope="col">Price</th>
+      <th scope="col">Date</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let produit of produits | filter: searchText">
+      <td>
+        <img src="http://localhost:8080/SpringMVC/produit/barcode/{{produit.idProduit}}" width="200" height="50">
+      </td >
+      <td>{{produit.libelleProduit}}</td>
+      <td>{{produit.categorieProduit}}</td>
+      <td>{{produit.description}}</td>
+      <td> {{produit.image}}</td>
+      <td>{{produit.prix}}</td>
+      <td>{{produit.dateCreation| date}}</td>
+      <td>
+        <button mat-icon-button
+                class="btn-primary btn edit" (click)="openUpdateDialog(produit.idProduit)" >
+          <mat-icon>edit </mat-icon>
+        </button>
+        <button mat-icon-button class="btn-danger btn" (click)="delete(produit)" >
+          <mat-icon>delete </mat-icon>
+        </button>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
