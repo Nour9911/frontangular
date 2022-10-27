@@ -1,4 +1,4 @@
-# AssignementDEVOPS
+# AssignementDEVOPS 
 
 #### Made by:
 
@@ -13,7 +13,7 @@ NodeJS
 Webstorm (or others)
 
 ```
-#### Notes:
+#### Notes for the frontend:
 
 Step 0 : npm install
 
