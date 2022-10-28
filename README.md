@@ -31,6 +31,8 @@ Step 6 : Press command now to do a simple purchase
 
 Step 7 : Click on " Check your bills " to see your purchased items
 
+==> Pipeline ci/cd soon..
+
 [Backend with Spring BOOT Java](https://gitlab.com/Nour9911/internassignmentbackend.git
 ).
 
