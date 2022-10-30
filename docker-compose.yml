@@ -20,7 +20,7 @@ services:
     container_name: shopspring
     restart: on-failure
     environment:
-     - spring.datasource.url=jdbc:postgres://postgresdb:5432/assignmentdb
+     - spring.datasource.url=jdbc:postgresql://postgresdb:5432/assignmentdb
     ports:
      - 8081:8081
     depends_on:
